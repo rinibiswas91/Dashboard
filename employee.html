@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<style>
+table, td, th {
+    
+ border: 1px solid black;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+      background-color: green;
+    color: white;
+}
+td{
+   padding: 15px;
+}
+</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example98-production</title>
+  
+
+  <script src="angular.min.js"></script>
+  
+
+  
+</head>
+<body ng-app="" bgcolor="#EEE8AA">
+
+
+<div ng-init="employees = [{name:'John',project:'pdx' ,phone:'555-1276' ,status:'running' },
+                         {name:'ajay',project:'hrms' ,phone:'555-1276' ,status:'running' },
+                         {name:'vijay',project:'hrms' ,phone:'555-1276' ,status:'running' },
+                         {name:'sunny',project:'quickoffice' ,phone:'555-1276' ,status:'running' },
+                         {name:'rohit',project:'hrms' ,phone:'555-1276' ,status:'running' },
+                         {name:'raaj',project:'quickoffice' ,phone:'555-1276' ,status:'running' },
+                         {name:'rahul',project:'book my show' ,phone:'555-1276' ,status:'running' },
+                         {name:'amit',project:'online railway booking' ,phone:'555-1276' ,status:'running' },
+                         {name:'anthony',project:'shopping cart' ,phone:'555-1276' ,status:'running' },
+                         {name:'sagar',project:'myecampus' ,phone:'555-1276' ,status:'running' },
+                         {name:'sarika',project:'medical medician selection' ,phone:'555-1276' ,status:'running' },
+                         {name:'jyoti',project:'myecampus' ,phone:'555-1276' ,status:'running' },
+                         {name:'mita',project:'pdx' ,phone:'555-1276' ,status:'running' },
+                         {name:'pankaj',project:'online railway booking' ,phone:'555-1276' ,status:'running' },
+                         {name:'kirti',project:'medical medician selection' ,phone:'555-1276' ,status:'running' },
+                         {name:'akshata',project:'quickoffice' ,phone:'555-1276' ,status:'running' },
+                         {name:'saurav',project:'book my show' ,phone:'555-1276' ,status:'running' },
+                         {name:'piyush',project:'online railway booking' ,phone:'555-1276' ,status:'running' },
+                         {name:'shweta',project:'shopping cart' ,phone:'555-1276' ,status:'running' },
+                         {name:'aarti',project:'myecampus' ,phone:'555-1276' ,status:'running' },
+                         {name:'shaam',project:'shopping cart' ,phone:'555-1276' ,status:'running' },
+                         {name:'miraya',project:'medical medician selection' ,phone:'555-1276' ,status:'running' },
+                         {name:'mayra',project:'book my show' ,phone:'555-1276' ,status:'running' },
+                         {name:'rini',project:'pdx' ,phone:'555-1276' ,status:'running' }]"></div>
+
+<label>Search: <input ng-model="searchText"></label>
+<table id="searchTextResults" border="2">
+  <tr><th>Name</th><th>Project</th><th>Phone</th><th>Status</th></tr>
+  <tr data-ng-repeat="employee in employees | filter:searchText">
+    <td>{{employee.name}}</td>
+    <td>{{employee.project}}</td>
+    <td>{{employee.phone}}</td>
+    <td>{{employee.status}}</td>
+  </tr>
+</table>
+<form method="post" action="orgDetail.html">
+<button id="but1"> GO BACK </button>
+</form>
+</body>
+</html>
+
