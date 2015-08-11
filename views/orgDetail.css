@@ -1,0 +1,145 @@
+<style type="text/css">
+
+#menu{
+    background-color: #6495ED;
+    height:30px;
+
+}
+body{
+
+
+
+background-color: #F5DEB3;
+
+
+
+}
+#myanchor{
+
+
+
+
+
+  
+}
+
+#slider{
+    height: 500px;
+    width: 800px;
+    margin-left: 350px;
+    margin-top: 50px;
+
+}
+#panel1, #electronics {
+    padding: 2px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel1 {
+   
+   height: 180px;
+    width: 102px;
+   position:fixed;
+
+     display: none;
+}
+#panel2, #men {
+    padding: 2px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel2 {
+   
+    height: 180px;
+    width: 102px;
+    margin-left: 102px;
+position:fixed;
+     display: none;
+}
+
+
+#panel3, #women {
+    padding: 2px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel3 {
+   
+    height: 180px;
+    width: 102px;
+    margin-left: 204px;
+position:fixed;
+     display: none;
+}
+
+#panelmen {
+   
+    height: 180px;
+    width: 102px;
+    margin-left: 204px;
+
+     display: none;
+}
+
+#menu{
+    background-color: peru;
+    height:30px;
+
+}
+
+#title{
+    background-color:brown;
+    height:70px;
+
+
+}
+input{
+
+height: 30px;
+width: 102px;
+
+
+}
+
+#home{
+
+height: 30px;
+width: 102px;
+
+
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 10s slidy infinite; 
+}
+
+    
+
+</style>

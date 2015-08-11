@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script >
+var attempt = 3; 
+var error="";
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+
+if(username=="")
+{
+alert("Please enter username");
+
+}
+else if(password=="")
+{ 
+	alert("Please enter password");
+
+}
+
+else if((username.length < 5) || (password.length > 15))
+{
+
+	alert("username should be 5 to 15 character");
+}
+
+
+if ( username == "saurav" && password == "rini"){
+alert ("Login successfully");
+window.location = "orgDetail.html"; 
+return false;
+}
+else{
+attempt --;
+alert("You entered wrong username and password now u have left "+attempt+" attempt;");
+
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+alert("u are no longer authorized to login");
+return false;
+}
+}
+}
+</script>
+
+<style type="text/css">
+	
+#login{
+	background-color:white;
+	 height: 500px;
+    width: 500px;
+    margin-left: 380px;
+    margin-top: 50px;
+ }
+
+
+#signIn{
+	background-color:gray;
+	 height: 85px;
+    width: 500px;
+
+ }
+
+
+#validation{
+    border: dotted;
+    background-color:gray;
+     height: 200px;
+     width: 300px;
+     margin-left: 80px;
+     margin-top: 50px;
+
+}
+
+ #signUp{
+	background-color:gray;
+	height: 85px;
+	 margin-top: 74px;
+    width: 500px;
+
+}
+
+input[type=text],input[type=password]{
+width: 60%;
+height: 25px;
+padding: 5px;
+margin-bottom: 7px;
+margin-top: 5px;
+border: 2px solid #800000;
+color: #4f4f4f;
+font-size: 16px;
+border-radius: 5px;
+}
+
+
+</style>
+</head>
+
+<body bgcolor="CornflowerBlue">
+
+
+
+<div  id="login">
+<div id="signIn"  align="center"  style="font-family:verdana" >
+<h1> Sign In Here:</h1>
+</div>
+<div id="validation" align="center" >
+<b>UserName:<input type="text" id="username" name="password"/> </b>
+<br>
+<br>
+<br>
+<b>Password: <input type="password" id="password" name="password"/> </b>
+<br>
+<br>
+<br>
+<input type="button" id="submit" value="Submit" onclick="validate()"/>
+
+</div>
+
+
+<div id="signUp"   style="font-family:verdana" >
+<h1 >Are u a new User ?</h1>
+<a href="orgDetail.html" ><b> SignUp </b> </h1> </a>
+</div>
+
+</div>	
+
+
+
+
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS Routes example</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="orgDetail.js"></script>
+    <link rel="stylesheet" type="text/css" href="orgDetail.css">  
+    
+</head>
+
+<body ng-app="sampleApp">
+
+
+
+<div id="title" ><h1  align="center" style="font-family:verdana"><font color="white" >Flipkart</font></h1></div>
+<div id="menu">
+
+
+<input type="button" id="electronics" value="Electroics"> 
+<input type="button" id="men" value="Men">
+<input type="button" id="women" value="Women">
+<a href="orgDetail.html" ><button  id="home">Home</button></a>
+
+
+</div>
+
+
+<div id="panel1"> 
+<input type="button" id="electronics" value="Tv" > 
+<input type="button" id="electronics" value="Refrigrator" >
+<input type="button" id="electronics" value="washingmachine" >
+<input type="button" id="electronics" value="Phones" >
+<input type="button" id="electronics" value="iPad" >
+</div>
+
+
+<div id="panel2"> 
+<div><a class="myanchor" href="#/route1/abcd"><button id="home">Tshirt</button></a></div>
+<input type="button" id="men" value="Jeans" >
+<input type="button" id="men" value="pants" >
+<input type="button" id="men" value="trouser" >
+<input type="button" id="men" value="shoes" >
+</div>
+
+<div id="panel3"> 
+<input type="button" id="women" value="top" > 
+<input type="button" id="women" value="Jeans" >
+<input type="button" id="women" value="cosmentics" >
+<input type="button" id="women" value="trouser" >
+<input type="button" id="women" value="shoes" >
+</div>
+
+
+
+<div id="slider">
+<figure>
+<img src="file:///home/synerzip/4.jpg" alt="">
+<img src="file:///home/synerzip/1.jpeg" alt="">
+<img src="file:///home/synerzip/3.gif" alt="">
+<img src="file:///home/synerzip/2.jpeg" alt="">
+<img src="file:///home/synerzip/6.jpeg" alt="">
+<img src="file:///home/synerzip/7.jpeg" alt="">
+</figure>
+</div>
+
+<div ng-view></div>
+
+<script>
+    var module = angular.module("sampleApp", ['ngRoute']);
+
+    module.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                    when('/route1/:param', {
+                        templateUrl: 'tshirt.html',
+                        controller: 'RouteController'
+                    }).
+                    when('/route2/:param', {
+                        templateUrl: 'saurav.html',
+                        controller: 'RouteController'
+                    }).
+                    otherwise({
+                        redirectTo: '/'
+                    });
+        }]);
+
+    module.controller("RouteController", function($scope, $routeParams) {
+        $scope.param = $routeParams.param;
+    });
+</script>
+
+
+
+</body>
+</html>
